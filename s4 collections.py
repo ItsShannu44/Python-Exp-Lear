@@ -161,10 +161,15 @@ print(id,type(id),id['c'])
 
 
 
-students=[{'name':'John','score':23,
-           'name':'bob','score':67,
-           'name':'mark','score':23}]
+stud=[{'name':'John','score':23,'name':'bob','score':67,'name':'mark','score':23}]
 
-print(students)
+group_by_score=dd(list)
 
+for s in stud:
+    group_by_score[s["score"]].append(s)
+
+for score, s_list in group_by_score.items():
+    print(f'Score - {score}')
+    for s in s_list:
+        print(f'\t-{s['name']}')
 
