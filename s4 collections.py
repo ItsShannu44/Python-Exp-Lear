@@ -161,7 +161,7 @@ print(id,type(id),id['c'])
 
 
 
-stud=[{'name':'John','score':23,'name':'bob','score':67,'name':'mark','score':23}]
+stud=[{'name':'John','score':23},{'name':'bob','score':67},{'name':'mark','score':23}]
 
 group_by_score=dd(list)
 
