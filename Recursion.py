@@ -21,3 +21,20 @@ if n<0:
     print(f"sum of {n} values is not possible")
 else:
     print(f"sum of n is {sumofn(n)}")
+
+
+#_____________GCD_____________
+
+def gcd(a,b):
+    if b==0:
+        return a
+    return gcd(b, a%b)
+
+a=int(input("Enter first val:"))
+b=int(input("Enter second val:"))
+print(f"The GCD of {a},{b} is {gcd(a,b)}")
+
+
+
+#______________________________________
+
