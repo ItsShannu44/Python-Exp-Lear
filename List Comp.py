@@ -62,3 +62,6 @@ print(s)
 s={(a,b) for a in [1,2,3,4] for b in [4,5] if(a+b)%2==0}
 print(s)
 
+#=======================Dictionary=================
+
+#______________Simple Comprehension___________________
