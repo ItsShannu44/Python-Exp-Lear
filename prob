@@ -1,0 +1,9 @@
+Craete a list of all uopercase words form a given list.
+Given a list of words, create a list with words that start with a vowel.
+Given a list of strings, create a new list that contains the string and its length.
+Extract all lowercase letters from a string into a set.
+Given a sentence , create a set of all words that have more than 4 chars.
+Create a set of first letters of each word in a given paragraph.
+Given a string create a dictionary of each character with its frequency.
+From a dictionary of student course create a new dictionary of students who have scored more than 70 marks.
+Given a list of student records i.e 1 student 5 marks. create a new dictionary that has student and total marks.

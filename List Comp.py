@@ -39,8 +39,8 @@ print(l)
 
 
 
-#======================SET=================
 
+#======================SET=================
 #______________Simple Comprehension___________________
 
 s={a for a in [1,2,3,4,5]}
@@ -62,6 +62,23 @@ print(s)
 s={(a,b) for a in [1,2,3,4] for b in [4,5] if(a+b)%2==0}
 print(s)
 
-#=======================Dictionary=================
 
+
+#=======================Dictionary=================
 #______________Simple Comprehension___________________
+d={a: a+10 for a in range(5)}
+print(d)
+
+
+#____________Conditional Coprehension________________
+d={a:a**3 for a in range(10) if a**3%4==0}
+print(d)
+
+#____________Nested Comprehension__________________
+d={a:{b:a+b for b in "ABC"} for a in "ABC"}
+print(d)
+
+#____________Nested Conditional Comprehension___________
+d={x:{y:"EVEN" if y%2==0 else "ODD" for y in range(1,5)}
+for x in range(1,3)}
+print(d)
