@@ -31,3 +31,8 @@ print(l)
 
 l=[a*b for a in range(1,5) for b in range(1,3)]
 print(l)
+
+#____________Nested Conditional Comprehension___________
+
+l=[a*b for a in range(10) for b in range(5) if (a+b)%2==0]
+print(l)
