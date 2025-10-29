@@ -31,3 +31,25 @@ d={1:2,3:4,5:6,7:8,9:8}
 d_iter=iter(d)
 print(type(d),type(d_iter))
 
+
+import itertools as it
+seq=it.chain(['A','B','C','D','E','F','G','H'])
+seq_iter=iter(seq)
+for _ in range(5):
+    print(next(seq_iter),end=" ") 
+
+for _ in range(3):
+    print(next(seq))
+
+
+#_______________StopIteration___________________
+
+s={1,2,3,5,6}
+s_iter=iter(s)
+try:
+    while True:
+        print(next(s_iter))
+except StopIteration:
+    print('Compleated')
+
+    
