@@ -7,3 +7,16 @@ Create a set of first letters of each word in a given paragraph.
 Given a string create a dictionary of each character with its frequency.
 From a dictionary of student course create a new dictionary of students who have scored more than 70 marks.
 Given a list of student records i.e 1 student 5 marks. create a new dictionary that has student and total marks.
+
+
+
+
+
+
+
+#Use an iterator to print the keys in a dictionary
+#check if the itereator will print only the items in the dictionary
+#define a userdefined function as reverse that iterate over a list in reverse order and prints the output
+#write a decorator called greet that acts hello to the original function that prints the user's name.
+#create a decorator that prints function execution started and function exexution ended before and after the wrapper function executes.
+#Apply a decorator to the recursive function of factorial and prints how many times the function was called.

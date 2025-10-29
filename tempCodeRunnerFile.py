@@ -1,2 +1,11 @@
-s={1,2,3,4,5}
-# st_iter=iter(s)
+
+# def wrap(f):
+#     def inner():
+#         print('Got Decorated')
+#         f() #calling outerone inside inner
+#     return inner
+
+# d = wrap(10)
+# print(d)
+
+

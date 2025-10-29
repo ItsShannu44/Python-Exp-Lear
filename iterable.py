@@ -50,6 +50,7 @@ try:
     while True:
         print(next(s_iter))
 except StopIteration:
-    print('Compleated')
+    print('Completed')
 
-    
+
+
