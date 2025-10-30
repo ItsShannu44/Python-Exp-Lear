@@ -20,3 +20,7 @@ Given a list of student records i.e 1 student 5 marks. create a new dictionary t
 #write a decorator called greet that acts hello to the original function that prints the user's name.
 #create a decorator that prints function execution started and function exexution ended before and after the wrapper function executes.
 #Apply a decorator to the recursive function of factorial and prints how many times the function was called.
+
+
+Scenerio
+A dog has a name  and is of a particular breed and has an age. The dog barks and sleeps.
