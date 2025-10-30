@@ -32,3 +32,8 @@ l4=Laptop(price=200, model='pavilian', brand='HP')
 print(l1.brand, l1.model, l1.price)
 print(l2.brand, l2.model, l2.price)
 print(f'I own a {l2.model} of {l1.brand} that costs Rs. {l1.price}')
+
+
+#___________Accessing methods through objects_________________
+l1.turn_on()
+l2.specification()
