@@ -33,4 +33,4 @@ A car has a make model & year the car can be started and can be stopped. Every c
 
 2.Base class person child class teacher and student, Teaching assistant inherits both teacher and students. each class defines a method called as role.
 
-3.
+3.Create a base class called as shape with a method area. Derive the classed circle and rectangle that override area usig a relevant formula. Call area for different object.
