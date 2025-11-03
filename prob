@@ -24,3 +24,5 @@ Given a list of student records i.e 1 student 5 marks. create a new dictionary t
 
 Scenerio
 A dog has a name  and is of a particular breed and has an age. The dog barks and sleeps.
+
+A car has a make model & year the car can be started and can be stopped. Every car has an initial reading of 0.
