@@ -282,6 +282,7 @@ NODE delete_rear(NODE head)
         return head;
     }
 }
+
 void display(NODE head) {
     NODE T = head;
     while (T != NULL) {
