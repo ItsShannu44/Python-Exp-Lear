@@ -208,7 +208,6 @@
 
 
 
-// @VPL mainfile       // ← marks this as the file students see
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -218,60 +217,60 @@ struct node {
 };
 typedef struct node* NODE;
 
-NODE insertFront(NODE head, int val) {
-    NODE newnode = malloc(sizeof(struct node));
-    newnode->data = val;
-    newnode->link=NULL;
-    if(head==NULL)
-    {
-        newnode->link=head;
-        return newnode;
-    }
-    newnode->link=head;
-    head=newnode;
-    return head;
-}
-NODE insertEnd(NODE head, int val)
+NODE insert_frnt(NODE head, int data)
 {
-    NODE newnode=malloc(sizeof(struct node));
-    newnode->data=val;
-    newnode->link=NULL;
+    NODE nn=malloc(sizeof(struct node));
+    nn->data=data;
+    nn->link=NULL;
     if(head==NULL)
     {
-        printf("Inserted  %d at rear",newnode->data);
-        return newnode;
+        nn->link=head;
+        printf("Data %d inserted at front.\n",nn->data);
+        return nn;
     }
-    NODE T=head;
-    while(T->link!=NULL)
+    nn->link=head;
+    printf("Data %d inserted at front.\n",nn->data);
+    return nn;
+}
+NODE insert_end(NODE head,int data)
+{
+    NODE nn=malloc(sizeof(struct node));
+    nn->data=data;
+    nn->link=NULL;
+    if(head==NULL)
     {
-        T=T->link;
-    }
-    T->link=newnode;
-    printf("\nInserted %d at rear.\n",newnode->data);
-    return head;
+        printf("\nInserted %d at rear.",nn->data);
+        return nn;
+    }else{
+        NODE T=head;
+        while(T->link!=NULL)
+            T=T->link;
+            T->link=nn;
+        }
+        printf("\nInserted %d at end\n",nn->data);
+        return head;
 }
 NODE delete_frnt(NODE head)
 {
-    NODE T=head;
     if(head==NULL)
     {
-        printf("Empty list");
+        printf("\nEmpty List..");
     }else{
         NODE T=head;
         head=head->link;
-        printf("\nDeleted %d at front.\n",T->data);
+        printf("\nDeleted %d from front\n",T->data);
         free(T);
     }
     return head;
 }
 NODE delete_rear(NODE head)
 {
+    NODE curr=head,prev=NULL;
     if(head==NULL)
     {
-        printf("Empty List...");
+        printf("\nEmpty List...\n");
         return head;
     }else{
-        NODE curr=head,prev=NULL;
         while(curr->link!=NULL)
         {
             prev=curr;
@@ -284,24 +283,113 @@ NODE delete_rear(NODE head)
     }
 }
 void display(NODE head) {
-    NODE temp = head;
-    while (temp != NULL) {
-        printf("%d ", temp->data);
-        temp = temp->link;
+    NODE T = head;
+    while (T != NULL) {
+        printf("%d ", T->data);
+        T = T->link;
     }
 }
 
-int main() {
-    NODE head = NULL;
-    head = insertFront(head, 30);
-    head = insertFront(head, 20);
-    head = insertFront(head, 10);
+int main()
+{
+    NODE head=NULL;
+    head=insert_frnt(head,10);
+    head=insert_frnt(head,20);
+    head=insert_frnt(head,30);
+    display(head);
+    head=insert_end(head,50);
     display(head);
     head=delete_frnt(head);
-    display(head);
-    head=insertEnd(head, 60);
     display(head);
     head=delete_rear(head);
     display(head);
     return 0;
 }
+
+// NODE insertFront(NODE head, int val) {
+//     NODE newnode = malloc(sizeof(struct node));
+//     newnode->data = val;
+//     newnode->link=NULL;
+//     if(head==NULL)
+//     {
+//         newnode->link=head;
+//         return newnode;
+//     }
+//     newnode->link=head;
+//     head=newnode;
+//     return head;
+// }
+// NODE insertEnd(NODE head, int val)
+// {
+//     NODE newnode=malloc(sizeof(struct node));
+//     newnode->data=val;
+//     newnode->link=NULL;
+//     if(head==NULL)
+//     {
+//         printf("Inserted  %d at rear",newnode->data);
+//         return newnode;
+//     }
+//     NODE T=head;
+//     while(T->link!=NULL)
+//     {
+//         T=T->link;
+//     }
+//     T->link=newnode;
+//     printf("\nInserted %d at rear.\n",newnode->data);
+//     return head;
+// }
+// NODE delete_frnt(NODE head)
+// {
+//     NODE T=head;
+//     if(head==NULL)
+//     {
+//         printf("Empty list");
+//     }else{
+//         NODE T=head;
+//         head=head->link;
+//         printf("\nDeleted %d at front.\n",T->data);
+//         free(T);
+//     }
+//     return head;
+// }
+// NODE delete_rear(NODE head)
+// {
+//     if(head==NULL)
+//     {
+//         printf("Empty List...");
+//         return head;
+//     }else{
+//         NODE curr=head,prev=NULL;
+//         while(curr->link!=NULL)
+//         {
+//             prev=curr;
+//             curr=curr->link;
+//         }
+//         prev->link=NULL;
+//         printf("\nDeleted %d from rear\n",curr->data);
+//         free(curr);
+//         return head;
+//     }
+// }
+// void display(NODE head) {
+//     NODE temp = head;
+//     while (temp != NULL) {
+//         printf("%d ", temp->data);
+//         temp = temp->link;
+//     }
+// }
+
+// int main() {
+//     NODE head = NULL;
+//     head = insertFront(head, 30);
+//     head = insertFront(head, 20);
+//     head = insertFront(head, 10);
+//     display(head);
+//     head=delete_frnt(head);
+//     display(head);
+//     head=insertEnd(head, 60);
+//     display(head);
+//     head=delete_rear(head);
+//     display(head);
+//     return 0;
+// }
