@@ -34,3 +34,14 @@ A car has a make model & year the car can be started and can be stopped. Every c
 2.Base class person child class teacher and student, Teaching assistant inherits both teacher and students. each class defines a method called as role.
 
 3.Create a base class called as shape with a method area. Derive the classed circle and rectangle that override area usig a relevant formula. Call area for different object.
+
+
+========================================================
+
+define a bank account class with attributes name, acc no and balance. Implement two methods deposit and withdraw with validations.
+
+create a product class with attributes name, price and discount,  discount is protected. implement a setter that changes a price after applying a discount only the discount is less than 25%.
+
+create a car class with a private attributes. inplements the methods accelerate, break that adjust the speed within the limits of 0-100 km/h 
+
+create a user class with protected username and  private password. Admin inherits the user and adds a private variable called as access level. Implement methods to have ristricted password access and restricted modification of access level.

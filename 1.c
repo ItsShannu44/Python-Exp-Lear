@@ -1,59 +1,207 @@
+// #include <stdio.h>
+// #include <math.h>
+// #include <ctype.h>
+
+// char stack[50];
+// int top=-1;
+
+// void push(char c)
+// {
+//     stack[++top]=c;
+// }
+// char pop()
+// {
+//     return stack[top--];
+// }
+// char peek(){
+//     return stack[top];
+// }
+// int isEmpty(){
+//     return top==-1;
+// }
+// int prec(char op)
+// {
+//     switch(op)
+//     {
+//         case '^':return 3;
+//         case '*':
+//         case '/':return 2;
+//         case '+':
+//         case '-':return 1;
+//         default: return 0;
+//     }
+// }
+// void infixtopostfix(char *exp) {
+//     char output[100];
+//     int k = 0;
+
+//     for (int i = 0; exp[i]; i++) {
+//         char c = exp[i];
+
+//         if (isalnum(c)) {  
+//             output[k++] = c;
+//         } 
+//         else if (c == '(') {
+//             push(c);
+//         } 
+//         else if (c == ')') {
+//             while (!isEmpty() && peek() != '(')
+//                 output[k++] = pop();
+//             if (!isEmpty()) pop(); 
+//         } 
+//         else { 
+//             while (!isEmpty() && prec(peek()) >= prec(c)) {
+//                 if (c == '^' && prec(peek()) == prec(c))
+//                     break; 
+//                 output[k++] = pop();
+//             }
+//             push(c);
+//         }
+//     }
+
+//     while (!isEmpty())
+//         output[k++] = pop();
+
+//     output[k] = '\0';
+//     printf("Postfix: %s\n", output);
+// }
+
+// int main() {
+//     char exp[100];
+//     printf("Enter the infix expression: ");
+//     scanf("%s", exp);
+//     infixtopostfix(exp);
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// #include<stdio.h>
+// #include<math.h>
+// #include<ctype.h>
+
+// char stack[100];
+// int top=-1;
+
+// void push(char c){
+//     stack[++top]=c;
+// }
+// char pop(){
+//     return stack[top--];
+// }
+// char peek(){
+//     return stack[top];
+// }
+// int isEmpty(){
+//     return top==-1;
+// }
+
+// int prec(char op)
+// {
+//     switch(op)
+//     {
+//         case '^':return 3;
+//         case '*':
+//         case '/':return 2;
+//         case '+':
+//         case '-':return 1;
+//         default: return 0;
+//     }
+// }
+
+// void infixtopostfix(char*exp)
+// {
+//     char output[100];
+//     int k=0;
+
+//     for(int i=0;exp[i];i++)
+//     {
+//         char c=exp[i];
+
+//         if(isalnum(c))
+//         {
+//             output[k++]=c;
+//         }else if(c=='('){
+//             push(c);
+//         }else if(c==')'){
+//             while(!isEmpty() && peek()!='(')
+//             output[k++]=pop();
+//         if(!isEmpty())pop();
+//         }else{
+//             while(!isEmpty() && prec(peek())>=prec(c)){
+//             if(c=='^' && prec(peek())>=prec(c))
+//             break;
+//                 output[k++]=pop();
+//             }
+//             push(c);
+//         }
+//     }
+//     while(!isEmpty())
+//     {
+//         output[k++]=pop();
+//         output[k]='\0';
+//         printf("Postfix: %s\n",output);
+//     }
+// }
+// int main()
+// {
+//     char exp[100];
+//     printf("Enter the infix exp:");
+//     scanf("%s",exp);
+//     infixtopostfix(exp);
+//     return 0;
+// }
+
+
+
 #include<stdio.h>
-#include<stdlib.h>
+#include<ctype.h>
+#include<math.h>
 
-typedef struct mynode{
-    int data;
-    struct mynode*link;
-}*NODE;
+int stack[100];
+int top=-1;
 
-NODE Create_Node(int data)
+void push(char c)
 {
-    NODE nn=malloc(sizeof(struct mynode));
-    if(nn==NULL)
-    {
-        printf("\n\t NO MEMORY");
-        exit(1);
-    }  
-nn->data=data;
-nn->link=NULL;
-return nn;
+    stack[++top]=c;
 }
-
-NODE Insert_at_front(NODE H,int data)
+int pop()
 {
-    NODE nn=Create_Node(data); 
-    if(H==NULL)
-    {
-        return nn;
-    }else{
-        nn->link=H;
-        return nn;
-    }
-}
-
-void Display(NODE H)
-{
-    if(H ==NULL)
-    {
-        printf("\n List is Empty");
-        return;
-    }
-    printf("Linked list ele:");
-    while(H!=NULL)
-    {
-        printf("%d->",H->data);
-        H=H->link;
-    }
-    printf("NULL \n");
+    return stack[top--];
 }
 
 int main()
 {
-    NODE H=NULL;
-    NODE n1 = Create_Node(10);
-    printf("Node created with data: %d\n", n1->data);
-    H=Insert_at_front(H,80);
-    H=Insert_at_front(H,60);
-    Display(H);
-    return 0;
+    char exp[50];
+    printf("Enter Postfix:");
+    scanf("%s",exp);
+    for(int i=0;exp[i];i++)
+    {
+        if(isdigit(exp[i]))push(exp[i]-'0');
+        else{
+            int b=pop(), a=pop();
+            switch(exp[i])
+            {
+                case '+':push(a+b); break;
+                case '-':push(a-b);break;
+                case '*':push(a*b);break;
+                case '/':push(a/b);break;
+                case '^':push(pow(a,b));break;
+            }
+        }
+    }
+    printf("Result: %d\n",pop());
 }
