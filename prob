@@ -45,3 +45,12 @@ create a product class with attributes name, price and discount,  discount is pr
 create a car class with a private attributes. inplements the methods accelerate, break that adjust the speed within the limits of 0-100 km/h 
 
 create a user class with protected username and  private password. Admin inherits the user and adds a private variable called as access level. Implement methods to have ristricted password access and restricted modification of access level.
+
+
+
+============================== Aggregation ===========
+
+ A user creates folder, folder has files, files have paragraph, paragraph have words, each word made up of characters.
+
+ A library has books, users use library, A smartphone has a camera and a display. User use the smart phone.
+
