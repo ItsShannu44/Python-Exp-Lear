@@ -7,7 +7,6 @@ n=123
 
 print(dir(l))
 print(l.__add__([5]))
-
 print(l.__class__)
 print(l.__sizeof__())
 print(l.__hash__)
@@ -17,4 +16,12 @@ print(s.endswith('a'))
 print(t.__add__((23,)))
 print(id(t))
 print(dir(sets))
-print()
+
+#---------------------------------------------------
+
+import os
+
+def f():
+    pass
+print(type(os),type(f))
+print(id(1),id(True),id([]),id({}), id(''), id(""), id(''''''))
