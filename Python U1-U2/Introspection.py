@@ -20,6 +20,7 @@ print(dir(sets))
 #---------------------------------------------------
 
 import os
+os.system('cls')
 
 def f():
     pass
