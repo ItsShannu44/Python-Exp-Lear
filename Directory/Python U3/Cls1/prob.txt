@@ -1,0 +1,3 @@
+A program converts user input into an integer. Handle invalid inputs such as alphabetic  strings and sym
+A function computes a sqrt of a number handle negative inputs.
+A program performs arithmetic operations on mix types handle the type errors that are caused by incompatible operations.
