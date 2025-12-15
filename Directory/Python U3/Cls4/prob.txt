@@ -1,2 +1,11 @@
 Assume that you have csv file of emp details that consist of name, empid, dept, sal read the file and compute the following values DA=18% of sal, HRA=2% of sal. 
 Create an output file called as emp_sal.csv where empid, HRA, DA, Gross sal is written back
+
+
+
+cls 4 json
+
+Assuming that you have a file called  emp.json that has name, department, sal. Display the highest salary and lowest salary. 
+1. Display the name of the employee that gets the Highest salary
+2. Display the name of the employee wth lowest salary
+3. Display the avg salary per department
