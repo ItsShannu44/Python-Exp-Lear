@@ -1,0 +1,11 @@
+﻿Product, Qty, Amount, Region, Customer, City,
+Mobile ,10,"12,000", south ,Rahul," ""Bengaluru""",
+Laptop, ,45000,North, SHREYA , Delhi,
+Headphones,5,, west, Arjun , Mumbai,
+Charger,3,"1,200",east,Meera,Kolkata,
+Camera ,2,"55,000", South, ,Chennai,
+Tablet, ," ""22","500""",north,Rohan," ""New Delhi"""
+Mouse,7,800,west, anita ,Pune,
+Keyboard,4,"1,500",East, karthik ," ""Bhubaneswar""",
+Monitor, ," ""12","800""",south, ,Hyderabad
+Speaker,6,"3,200", west ,Vikram, Ahmedabad,

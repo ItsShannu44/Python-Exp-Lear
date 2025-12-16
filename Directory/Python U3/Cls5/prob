@@ -1,0 +1,4 @@
+1.  write an XML file called as employees.xml, it contains name, age and sal of every employee. 
+    Once the XML is created modify the existing sal by increasing it by 5%. Update the 5 and show the changed sal.
+
+2.  
