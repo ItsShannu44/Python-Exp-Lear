@@ -413,98 +413,112 @@
 
 
 
-#include<stdio.h>
-#include<stdlib.h>
+// #include<stdio.h>
+// #include<stdlib.h>
 
-typedef struct mynode{
-    int data;
-    struct mynode*link;
-}*NODE;
+// typedef struct mynode{
+//     int data;
+//     struct mynode*link;
+// }*NODE;
 
-NODE ins_frnt(NODE h, int data)
-{
-    NODE nn=malloc(sizeof(struct mynode));
-    nn->data=data;
-    if(h==NULL)
-    {
-        nn->link=h;
-        return nn;
-    }
-    nn->link=h;
-    h=nn;
-    return h;
-}
-NODE ins_rear(NODE h, int data)
-{
-    NODE nn=malloc(sizeof(struct mynode));
-    nn->data=data;
-    nn->link=NULL;
-    if(h==NULL)
-    {
-        printf("\nInserted %d at end.\n",nn->data);
-        return nn;
-    }
-    NODE T=h;
-    while(T->link!=NULL)
-    {
-        T=T->link;
-    }
-    T->link=nn;
-    printf("\nInserted %d at rear.\n",nn->data);
-    return h;
-}
-NODE del_frnt(NODE h)
-{
-    if(h==NULL)
-    {
-        printf("\nEmpty List...\n");
-        return h;
-    }
-    NODE T=h;
-    h=h->link;
-    printf("NODE %d deleted at frnt.\n",T->data);
-    free(T);
-    return h;
-}
-NODE del_end(NODE h)
-{
-    if(h==NULL)
-    {
-        printf("\nEmpty List..\n");
-        return h;
-    }
-    NODE curr=h, prev=NULL;
-    while(curr->link!=NULL)
-    {
-        prev=curr;
-        curr=curr->link;
-    }
-    prev->link=NULL;
-    printf("Deleted %d at end.\n",curr->data);
-    free(curr);
-    return h;
-}
-void display(NODE h)
-{
-    NODE T=h;
-    while(T!=NULL)
-    {
-        printf("%d->",T->data);
-        T=T->link;
-    }
-    printf("NULL\n");
-}
-int main(){
-    NODE h=NULL;
-    h=ins_frnt(h,10);
-    h=ins_frnt(h,12);
-    h=ins_frnt(h,14);
-    display(h);
-    h=ins_rear(h,20);
-    h=ins_rear(h,30);
-    display(h);
-    h=del_frnt(h);
-    display(h);
-    h=del_end(h);
-    display(h);
-}
+// NODE ins_frnt(NODE h, int data)
+// {
+//     NODE nn=malloc(sizeof(struct mynode));
+//     nn->data=data;
+//     if(h==NULL)
+//     {
+//         nn->link=h;
+//         return nn;
+//     }
+//     nn->link=h;
+//     h=nn;
+//     return h;
+// }
+// NODE ins_rear(NODE h, int data)
+// {
+//     NODE nn=malloc(sizeof(struct mynode));
+//     nn->data=data;
+//     nn->link=NULL;
+//     if(h==NULL)
+//     {
+//         printf("\nInserted %d at end.\n",nn->data);
+//         return nn;
+//     }
+//     NODE T=h;
+//     while(T->link!=NULL)
+//     {
+//         T=T->link;
+//     }
+//     T->link=nn;
+//     printf("\nInserted %d at rear.\n",nn->data);
+//     return h;
+// }
+// NODE del_frnt(NODE h)
+// {
+//     if(h==NULL)
+//     {
+//         printf("\nEmpty List...\n");
+//         return h;
+//     }
+//     NODE T=h;
+//     h=h->link;
+//     printf("NODE %d deleted at frnt.\n",T->data);
+//     free(T);
+//     return h;
+// }
+// NODE del_end(NODE h)
+// {
+//     if(h==NULL)
+//     {
+//         printf("\nEmpty List..\n");
+//         return h;
+//     }
+//     NODE curr=h, prev=NULL;
+//     while(curr->link!=NULL)
+//     {
+//         prev=curr;
+//         curr=curr->link;
+//     }
+//     prev->link=NULL;
+//     printf("Deleted %d at end.\n",curr->data);
+//     free(curr);
+//     return h;
+// }
+// void display(NODE h)
+// {
+//     NODE T=h;
+//     while(T!=NULL)
+//     {
+//         printf("%d->",T->data);
+//         T=T->link;
+//     }
+//     printf("NULL\n");
+// }
+// int main(){
+//     NODE h=NULL;
+//     h=ins_frnt(h,10);
+//     h=ins_frnt(h,12);
+//     h=ins_frnt(h,14);
+//     display(h);
+//     h=ins_rear(h,20);
+//     h=ins_rear(h,30);
+//     display(h);
+//     h=del_frnt(h);
+//     display(h);
+//     h=del_end(h);
+//     display(h);
+// }
+
+// #include<stdio.h>
+// int main(){
+//     int i,j,n=5;
+//     for(j=0;j<n;j++){
+//     for(i=1;i<=n;i++)
+//     {
+//         printf("%d\t",i);
+//     }
+//     printf("\n");
+// }
+//     return 0;
+
+// }
