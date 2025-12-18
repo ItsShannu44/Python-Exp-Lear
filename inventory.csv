@@ -1,0 +1,6 @@
+ProductID,ProductName,Stock,ReorderLevel
+P101,Pen,50,30
+P102,Notebook,20,40
+P103,Marker,10,15
+P104,Eraser,60,25
+P105,Stapler,5,10

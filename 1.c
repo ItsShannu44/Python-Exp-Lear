@@ -509,16 +509,51 @@
 //     display(h);
 // }
 
+// Triangle- Top 5 ele bottom 1 ele
 // #include<stdio.h>
 // int main(){
 //     int i,j,n=5;
-//     for(j=0;j<n;j++){
-//     for(i=1;i<=n;i++)
+//     for(i=n;i>=1;i--)
 //     {
-//         printf("%d\t",i);
-//     }
+//         for(j=1;j<=i;j++)
+//         {
+//             printf("* ");
+//         }
 //     printf("\n");
 // }
-//     return 0;
-
+// return 0;
 // }
+
+// Triangle- Top 5 ele bottom 1 ele
+// #include<stdio.h>
+// int main(){
+//     int i,j,n=5;
+//     for(i=n;i>=1;i--)
+//     {
+//         for(j=1;j<=i;j++)
+//         {
+//             printf("* ");
+//         }
+//     printf("\n");
+// }
+// return 0;
+// }
+
+
+#include<stdio.h>
+int main()
+{
+    int i, j, n = 3;
+    printf("\nPyramid Pattern\n\n");
+    for(i = 1; i <= n; i++) {
+        for(j = 1; j <= n - i; j++) {
+            printf("  ");
+        }
+        for(j = 1; j <= (2*i - 1); j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}

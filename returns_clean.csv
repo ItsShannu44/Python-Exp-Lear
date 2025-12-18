@@ -1,0 +1,3 @@
+ReturnID,OrderID,Reason,Amount,RefundMode
+R101,O501,Damaged,500,UPI
+R103,O503,Not Required,300,WALLET
