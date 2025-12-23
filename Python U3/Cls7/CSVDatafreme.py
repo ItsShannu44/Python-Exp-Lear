@@ -1,4 +1,5 @@
 import  pandas as pd
+import xml.etree.ElementTree as xml
 
 sd=pd.read_csv('sales_demo.csv')
 pr=pd.read_csv('products_demo.csv')
@@ -64,7 +65,8 @@ s_all.to_csv('sales_all1.csv')
 s_all.to_excel('sales_all.xlsx',index=False)
 # s_all1.to_json('sales_all.json', index=False)
 # s_all1.to_json('sales_all1.json')
-# s_all1.to_xml('sales_all.xml',index=False)
-# s_all1.to_xml('sales_all_1.xml')
+s_all.to_xml('sales_all.xml', index=False, parser='etree')
+s_all1.reset_index(drop=True, inplace=True)
+s_all1.to_xml('sales_all.xml', index=False, parser='etree')
 
-
+s_all1.to_html('sales_all1.html')
