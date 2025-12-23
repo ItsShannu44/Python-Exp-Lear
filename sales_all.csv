@@ -1,0 +1,21 @@
+OrderID,ProductID,Qty,Amount,Region,Customer,City,Date
+1001,P101,2,24000,south,Rahul,Bengaluru,12-01-2024
+1002,P103,1,1500,west,Arjun,Mumbai,13-01-2024
+1003,P102,3,45000,north,Shreya,Delhi,14-01-2024
+1004,P104,1,1200,east,Meera,Kolkata,15-01-2024
+1005,P105,1,55000,south,Anand,Chennai,15-01-2024
+1006,P101,1,12000,west,Anita,Pune,16-01-2024
+1007,P106,2,1500,east,Karthik,Bhubaneswar,16-01-2024
+1008,P107,1,12800,south,Dev,Hyderabad,17-01-2024
+1009,P108,3,3200,west,Vikram,Ahmedabad,17-01-2024
+1010,P102,1,45000,north,Rohan,New Delhi,18-01-2024
+2001,P101,1,12000,south,Sneha,Bengaluru,2024-04-05
+2002,P102,2,90000,north,Amit,Delhi,2024-04-06
+2003,P103,3,4500,west,Raj,Mumbai,2024-04-08
+2004,P104,2,2400,east,Meera,Kolkata,2024-04-10
+2005,P105,1,53000,south,Vinay,Chennai,2024-05-01
+2006,P106,4,3200,west,Anjali,Pune,2024-05-03
+2007,P107,2,25600,south,Kiran,Hyderabad,2024-05-15
+2008,P108,5,5400,west,Neha,Ahmedabad,2024-05-20
+2009,P101,3,36000,north,Varun,Jaipur,2024-06-02
+2010,P102,1,45000,east,Diya,Bhubaneswar,2024-06-10

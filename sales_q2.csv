@@ -1,0 +1,11 @@
+OrderID,ProductID,Qty,Amount,Region,Customer,City,Date
+2001,P101,1,12000,south,Sneha,Bengaluru,2024-04-05
+2002,P102,2,90000,north,Amit,Delhi,2024-04-06
+2003,P103,3,4500,west,Raj,Mumbai,2024-04-08
+2004,P104,2,2400,east,Meera,Kolkata,2024-04-10
+2005,P105,1,53000,south,Vinay,Chennai,2024-05-01
+2006,P106,4,3200,west,Anjali,Pune,2024-05-03
+2007,P107,2,25600,south,Kiran,Hyderabad,2024-05-15
+2008,P108,5,5400,west,Neha,Ahmedabad,2024-05-20
+2009,P101,3,36000,north,Varun,Jaipur,2024-06-02
+2010,P102,1,45000,east,Diya,Bhubaneswar,2024-06-10
