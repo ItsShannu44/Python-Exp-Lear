@@ -65,3 +65,53 @@ with open('all.pkl','rb') as f:
     p_d1=p.load(f)
     p_s1=p.load(f)
 print(f'{p_l1},{p_d_1},{p_s1}')
+
+
+#6.-----------Functions---------
+
+def greet(name):
+    return f'Hello {name}'
+
+with open('func.pkl','wb') as f:
+    p.dump(greet, f)
+with open('func.pkl','rb') as f:
+    p_f=p.load(f)
+
+g1=greet('Alpha')
+g2=greet('Beta')
+print(g1,g2)
+
+#7.--------------Data Frames----------
+print('\n\n')
+import pandas as pd
+
+data={'Name':['Alpha','Beta','Gamma'],
+      'Age':[12,34,67],
+      'City':['Bangalore','Mangalore','Mysore']}
+df=pd.DataFrame(data)
+print(df,'\n',type(df))
+
+df.to_pickle('df.pkl')
+p_df=pd.read_pickle('df.pkl')
+print(p_df,'\n',type(p_df))
+
+
+#-------------LOADS and Dumps--------
+# dump-serialize the data from a Fille
+# load-desiarable data from a File
+# dumps- serialize the data as bytes in memory
+# loads- desirable bytes into data
+
+
+print('\n\n')
+
+a=10
+p_a=p.dumps(a)
+print(p_a),print(type(p_a))
+print(p.loads(p_a))
+
+b, c, d= 45, 7, "Hello"
+p_b=p.dumps(b)
+p_c=p.dumps(c)
+p_d=p.dumps(d)
+print(f'Deserialized data is {p.loads(p_b)},{p.loads(p_c)},{p.loads(p_d)}')
