@@ -5,7 +5,7 @@
 import random as r
 import time as t
 
-for i in range(50):
+for i in range(10):
     t_c=25+r.uniform(-2,2)
     print(f"Reading {i+1}: {t_c:.3f} C")
     t.sleep(0) #1sec delay
@@ -20,7 +20,7 @@ with open('sensor_read.csv','w', newline='') as f:
     writer=csv.writer(f)
     writer.writerow(['Timestamp','Temperature'])
     #Colum headers are created for the csv fle
-    for i in range(50):
+    for i in range(10):
         ts=t.time() #current time is captured in sec from Unix epoch time   .... Float val
         t_c=25+r.uniform(-2,2)#random temperature is being generated
         writer.writerow([ts,f'{t_c:2f}'])
@@ -50,8 +50,6 @@ print(df.head())
 
 
 
-
-
 print(plt.figure())
 print(plt.plot(df['Timestamp'],df['Temperature']))
 plt.xlabel('Time')
@@ -60,4 +58,38 @@ plt.title('Raw Sensor Data')
 plt.xticks(rotation=45)
 plt.tight_layout()
 print(plt.show())
+
+#----------------------------------
+#       Smoothened data
+#----------------------------------
+
+df['Value']=pd.to_numeric(df['Temperature'],errors='coerce')
+df['Value_Smooth']=df['Value'].rolling(window=5, min_periods=1).mean() #A rolling mean is calculated
+print(df.head())
+
+
+plt.figure()
+plt.plot(df['Timestamp'],df['Value'],label='Raw',alpha=0.5) #alpha creates the transparency of the visualization
+plt.plot(df['Timestamp'],df['Value_Smooth'],label='Smoothened')
+plt.xlabel("Time")
+plt.ylabel("Temperature (C)")
+plt.title("Raw vs Smoothened Sensor Data")
+plt.legend()
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+# -----------------------
+
+#Mean of Temperature Readings
+
+# -----------------------
+
+print('\n===========================\n')
+mid_index=len(df)//2
+print(mid_index)
+
+first_half_mean=df['Value_Smooth'].iloc[:mid_index].mean()
+second_half_mean=df['Value_Smooth'].iloc[mid_index:].mean()
+print(f"Mean of first half: {first_half_mean}")
+print(f"Mean of second half:{second_half_mean}")
 
