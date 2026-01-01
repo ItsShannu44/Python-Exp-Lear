@@ -114,4 +114,4 @@ b, c, d= 45, 7, "Hello"
 p_b=p.dumps(b)
 p_c=p.dumps(c)
 p_d=p.dumps(d)
-print(f'Deserialized data is {p.loads(p_b)},{p.loads(p_c)},{p.loads(p_d)}')
+print(f'Deserialized data is {p.loads(p_b)},{p.loads(p_c)},{p.loads(p_d)}') 
