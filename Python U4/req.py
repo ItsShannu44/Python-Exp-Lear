@@ -65,3 +65,6 @@ with open('api_data.csv','w',newline="")as f:
     writer.writerow([data['id'],data['title'],data['body'],data['userId']])
 print('Data stored in a csv file.')
 
+
+
+
