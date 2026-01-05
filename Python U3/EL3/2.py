@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt   # ONLY added for plotting
 
 # ---------- SIMULATION ----------
 np.random.seed(2)
@@ -29,18 +30,13 @@ for s, e in sessions:
         150, 75, len(df.loc[end:recovery_end])
     )
 
-
 # Motion noise
 df["heart_rate"] += np.random.normal(0, 3, len(df))
 
 # ---------- PANDAS TASKS ----------
-# Sleep & active inference
 df["state"] = np.where(df.heart_rate < 60, "Sleep", "Active")
-
-# Exercise detection
 df["exercise"] = df.heart_rate > 120
 
-# Recovery time calculation
 recoveries = []
 for t in df[df.exercise].index:
     post = df.loc[t:t+pd.Timedelta(minutes=20)]
@@ -49,10 +45,8 @@ for t in df[df.exercise].index:
 
 recovery_df = pd.DataFrame(recoveries, columns=["Exercise End","Recovered At"])
 
-# Abnormal HR detection
 df["abnormal"] = (df.heart_rate > 170) | (df.heart_rate < 40)
 
-# Daily fitness summary
 summary = {
     "Average HR": round(df.heart_rate.mean(),1),
     "Max HR": int(df.heart_rate.max()),
@@ -66,3 +60,9 @@ print(recovery_df.head())
 
 print("\nDaily Fitness Summary:")
 print(pd.Series(summary))
+
+# ---------- GRAPH USING PANDAS DF ----------
+df["heart_rate"].plot(title="Heart Rate Variation Over 24 Hours")
+plt.xlabel("Time")
+plt.ylabel("Heart Rate (bpm)")
+plt.show()
