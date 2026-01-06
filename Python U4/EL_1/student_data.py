@@ -46,6 +46,7 @@ curr.execute("""INSERT INTO students1(s_name, Python, DS, SE, OS, Java, PD)VALUE
 curr.execute("""INSERT INTO students1(s_name, Python, DS, SE, OS, Java, PD)VALUES('Holly', 77, 97, 58, 94, 88, 35)""")
 curr.execute("""INSERT INTO students1(s_name, Python, DS, SE, OS, Java, PD)VALUES('Dr.Kay', 65, 68, 46, 71, 50, 64)""")
 conn.commit()
+
 print("Data inserted successfully.")
 
 # curr.execute("DELETE FROM students1")
