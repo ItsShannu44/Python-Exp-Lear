@@ -47,5 +47,13 @@ curr.execute("""INSERT INTO students1(s_name, Python, DS, SE, OS, Java, PD)VALUE
 curr.execute("""INSERT INTO students1(s_name, Python, DS, SE, OS, Java, PD)VALUES('Dr.Kay', 65, 68, 46, 71, 50, 64)""")
 conn.commit()
 print("Data inserted successfully.")
+
+# curr.execute("DELETE FROM students1")
+
+# curr.execute("SELECT * from students1")
+# rows=curr.fetchall()
+# conn.commit()
+# for row in rows:
+#     print(row)
 curr.close()
 conn.close()
