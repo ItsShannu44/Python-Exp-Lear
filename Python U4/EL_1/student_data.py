@@ -56,4 +56,5 @@ print("Data inserted successfully.")
 # for row in rows:
 #     print(row)
 curr.close()
+
 conn.close()
