@@ -6,14 +6,14 @@ from collections import Counter
 
 SERVICE_ACCOUNT='service_acc.json'
 SHEET_URL='https://docs.google.com/spreadsheets/d/1zVoxZxxdoP5E25NbOKPlSq2Saj6wXgUjfrBgavm_huw/edit?usp=sharing' #paste the url of the sheet which we want to access
-WORKSHEET_NAME='API_DATA_Spreadsheet'
-SCOPES=['https://www.googleapis.com/drive.readonly','https://www.googleapis.com/spreadsheets.readonly']
+WORKSHEET_NAME="API_DATA_sheet"
+SCOPES=['https://www.googleapis.com/auth/drive.readonly','https://www.googleapis.com/auth/spreadsheets.readonly']
 
 def get_preferences():
     cred=Credentials.from_service_account_file(SERVICE_ACCOUNT,scopes=SCOPES) #loading cred from json
     client=gs.authorize(cred) #auth for client
     ss=client.open_by_url(SHEET_URL)
-    ws=ss.worksheet(WORKSHEET_NAME)
+    ws=ss.sheet1
     rows=ws.get_all_values()
     if not rows:
         raise RuntimeError('No data was found in the sheet')
