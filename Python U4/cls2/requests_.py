@@ -11,7 +11,7 @@ else:
 
 print(type(response.text), response.text)
 
-
+ 
 data=response.json()
 print(data)
 
