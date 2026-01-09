@@ -5,7 +5,7 @@ try:
     data=response.json()
     print(f'Retrived {len(data)} records')
 except req.exceptions.HTTPError as e:
-    print(f'HTTP Error: {e}') 
+    print(f'HTTP Error: {e}')    
 except req.exceptions.ConnectionError as e:
     print(f'Connection Error: Check internet connection {e}')
 except req.exceptions.Timeout as e:
