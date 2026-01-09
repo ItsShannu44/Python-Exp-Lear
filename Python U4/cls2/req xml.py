@@ -23,4 +23,4 @@ for item in data['posts']:
 
     
 tree.write('api_data_1.xml', xml_declaration=True)
-print("Data Stored Successfully") 
+print("Data Stored Successfully")   
