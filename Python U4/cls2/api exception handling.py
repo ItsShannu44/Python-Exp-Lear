@@ -14,3 +14,6 @@ except req.exceptions.RequestException as e:
     print(f'Error in making request {e}')
 except ValueError:
     print(f'Error in passing the JSON response')
+
+
+    
