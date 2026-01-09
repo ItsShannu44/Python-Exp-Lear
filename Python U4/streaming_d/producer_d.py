@@ -17,7 +17,7 @@ seq=1
 
 with open(OUT_FILE,'a', encoding='utf-8')as f:
     for _ in range(tot_events):
-        sensor_id=random.choice(SENSORS)
+        sensor_id=random.choice(SENSORS)   
         event=make_event(sensor_id,seq)
         f.write(json.dumps(event)+'\n')
         f.flush()
