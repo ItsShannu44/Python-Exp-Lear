@@ -24,4 +24,5 @@ user_el=ET.SubElement(root,["userId"])
 user_el.text=str(data['userId'])
 tree=ET.ElementTree(root)
 tree.write("api_data.xml",xml_declaration=True)
-print('data stored successfully')
+print('data stored successfully') 
+
