@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 
 response=req.get('https://dummyjson.com/post')
 data=response.json()
-
+ 
 root=ET.Element("posts")
 for item in data['posts']:
 

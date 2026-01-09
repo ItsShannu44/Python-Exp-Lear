@@ -12,7 +12,7 @@ else:
 print(type(response.text), response.text)
 
  
-data=response.json()
+data=response.json() 
 print(data)
 
 root=ET.Element("post")
