@@ -1,7 +1,7 @@
 import requests as req
 import xml.etree.cElementTree as ET
 
-response=req.get('https://dummyjson.com/post/120')
+response=req.get('https://dummyjson.com/post/120')  
 
 #Check if the request was successful.
 if response.status_code==200:
