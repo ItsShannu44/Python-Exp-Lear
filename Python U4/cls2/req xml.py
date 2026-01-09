@@ -20,5 +20,7 @@ for item in data['posts']:
     v_el=ET.SubElement(p_el,"Views")
     v_el.text=str(item['views'])
     tree=ET.ElementTree(root)
+
+    
 tree.write('api_data_1.xml', xml_declaration=True)
 print("Data Stored Successfully")
