@@ -127,3 +127,19 @@ print(df5.shape)
 # Convert Finish Time (HH:MM:SS) to total minutes
 
 #add the new col as run_mins
+
+
+#a.--Get the mean time taken by each nationalty
+df5.groupby('NATIONALITY')['Run_mins'].mean()
+
+#b/---Find the no of runners per nationality
+df5['NATIONALITY'].value_counts()
+
+#c.---Get the difference of minutes between each runners
+
+
+#d.Define the category of the runners based on the time taken
+df5['CATEGORY']=pd.cut(df5['Runs_mins'],bins=[0,120,140,160,200],labels=['Elite','Strong','Moderate','Slow'])
+print(df5)
+
+#____VISUALIZE THE DATA______
