@@ -176,7 +176,6 @@ nat_c.plot(kind='bar')
 df5.groupby('NATIONALITY')['Run_mins'].mean().plot(kind='bar')
 plt.show()
 
-
 #create scatter plots
 plt.scatter(df5['RANK'],df5['Run_mins'])
 plt.xlabel('RANK')
