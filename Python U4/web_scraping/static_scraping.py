@@ -192,6 +192,8 @@ top10=df5.nsmallest(10,'Run_mins')
 plt.barh(top10['NAME'],top10['Run_mins'])
 plt.show()
 
+
+
 #create line graphs
 plt.plot(df5['Run_mins'].expanding().mean())
 plt.show()
