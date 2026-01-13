@@ -158,7 +158,7 @@ df5['CATEGORY']=pd.cut(
 )
 print(df5)
 
-#____VISUALIZE THE DATA_________
+#_______VISUALIZE THE DATA_________
 
 plt.hist(df5['Run_mins'],bins=10)
 plt.xlabel('Minutes')
