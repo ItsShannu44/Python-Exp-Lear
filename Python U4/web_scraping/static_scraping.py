@@ -195,3 +195,4 @@ plt.show()
 #create line graphs
 plt.plot(df5['Run_mins'].expanding().mean())
 plt.show()
+  
