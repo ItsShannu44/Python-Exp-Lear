@@ -136,7 +136,7 @@ try:
         w.writerows(downloads_log)
     print(f'Downloaded {len(downloads_log)} files')
     print(f'Folder : {str(DOWNLOAD_DIR)}')
-
+  
 except Exception as e:
     screenshot_path = DOWNLOAD_DIR / 'debug.png'
     driver.save_screenshot(str(screenshot_path))
@@ -147,4 +147,3 @@ except Exception as e:
 finally:
     driver.quit()
 
-    
