@@ -1,0 +1,1 @@
+#A program converts user input into an integer. Handle invalid inputs such as alphabetic  strings and sym

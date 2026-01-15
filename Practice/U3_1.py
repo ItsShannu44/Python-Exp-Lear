@@ -1,3 +1,5 @@
+# A function computes a sqrt of a number handle negative inputs.
+
 from math import sqrt
 
 def compute_sqrt():
