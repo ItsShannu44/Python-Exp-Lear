@@ -20,8 +20,9 @@ print(df1)
 
 
 print('\n ')
+df.to_csv("for_pandas.csv", index=False)
 
-#Create a dataframe from a file
+# #Create a dataframe from a file
 df2=pd.read_csv('for_pandas.csv')
 print(df2)
 
