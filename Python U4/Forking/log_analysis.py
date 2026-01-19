@@ -15,7 +15,7 @@ def worker(chunk, OUT_FILE):
         parts=line.strip().split()
         if not parts:
             continue
-        level_1=part[0]
+        level_1=parts[0]
         if level_1 in counts:
             counts[level_1]+=1
     with open(OUT_FILE,'w') as f:
