@@ -6,8 +6,8 @@ except ZeroDivisionError as f:
     print(f"ZeroDivisionError:{f}")
 
 
-n=int(input("Enter the numerator"))
-d=int(input("Enter the dinominator"))
-print(n/d)
+# n=int(input("Enter the numerator"))
+# d=int(input("Enter the dinominator"))
+# print(n/d)
 
 
