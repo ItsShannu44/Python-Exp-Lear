@@ -41,3 +41,5 @@ with open(output_file, mode='w', newline='', encoding='utf-8') as outfile:
     writer.writerows(employees)
 
 print("EMP_Sal.csv generated successfully.")
+
+
