@@ -40,7 +40,7 @@ def fact_cal(n):
     for i in range(1, n+1):
         r*=i
     return r
-print(fact_cal(1000))
+print(fact_cal(10))
 
 #Zero division Error
 
@@ -52,12 +52,38 @@ print(fact_cal(1000))
 # s="Hello to Errors"
 # print(s.reverse())
 
-class Person:
-    def __init__(self,name, age):
-        self.name=name
-        self.age=age
-    def greet(self):
-        print(f"Hello, My name is {self.name}")
+# class Person:
+#     def __init__(self,name, age):
+#         self.name=name
+#         self.age=age
+#     def greet(self):
+#         print(f"Hello, My name is {self.name}")
 
-p1=Person('Deathstroke',45)
-p1.greet()
+# p1=Person('Deathstroke',45)
+# p1.greet()
+
+# class Myerror(Exception):
+#     pass
+
+# try:
+#     n=input("Enter the string")
+#     if(n=="Shannu"):
+#         print("Pattern Matched")
+#     else:
+#         raise Myerror("User Defined Error")
+# except Myerror as me:
+#         print(f'User Defined Error Occured: {me}')
+
+
+# try:
+#     f=open('newfile1.txt','w+')
+#     s=input("Enter the content: \n")
+#     f.writelines(s)
+#     f.seek(0)
+#     print(f.read())
+# except IOError as e:
+#     print(f'IOErroe: {e}')
+
+
+# n=input("enter the name")  Keyboard Interrupt Error press Ctrl+c while giving input
+
