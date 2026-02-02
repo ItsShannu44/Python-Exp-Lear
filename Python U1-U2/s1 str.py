@@ -35,7 +35,6 @@ s2="Hello this string is used to implement Index method"
 print(s2.index('o'))  #returns the index if val is only found otherwise err
 
 
-
 #parttiion
 new="This string will be partitioned based on a value"
 print(new.partition(' '))
