@@ -75,3 +75,9 @@ print(l5,l6)
 print(id(l5), id(l6)) #diff loc cuz the l6 is an copy of l5 so the loc changes
 
 
+
+#Reverse a string
+word=input("Enter a str to rev:")
+print("BEFORE REV:",word)
+rev=word[::-1]
+print("Reversed:",rev)
