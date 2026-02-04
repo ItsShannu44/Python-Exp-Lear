@@ -21,7 +21,7 @@ n=int(input("ENter num:"))
 if n<0:
     print("Not a prime number")
 else:
-    for i in range(2, n)
+    for i in range(2, n):
         if n%2==0:
             print("Not a prime")
             break

@@ -29,12 +29,17 @@ class Car:
 
     def stop(self):
         print(f'{self.model} of the year {self.year} is stopped')
-    
+
+    def update_reding(self,val):
+            new_read=self.reading+val
+            print(f"The {self.model} of the year {self.year} has run {new_read}km.")
+        
     def check_reading(self):
         print(f"The {self.model} of the year {self.year} has run {self.reading}km.")
 
 c1=Car('urus','2022')
 c2=Car('Dezire','2020')
 c1.start()
+c1.update_reding(20045)
 c1.check_reading()
 c2.stop()
