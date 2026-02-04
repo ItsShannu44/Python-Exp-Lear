@@ -2,12 +2,13 @@ import csv
 
 with open("data.csv",'w',newline="")as f:
     writer=csv.writer(f)
-    writer.writerow(['Name','Age'])
+    writer.writerow(['Name','Age','Place'])
     n=int(input("how much data you want to enter"))
     for i in range(n):
         name=input("Enter name")
         age=input("Enter age")
-        writer.writerow([name,age])
+        place=input("Enter place")
+        writer.writerow([name,age,place])
 
     print("Data Written successfully")
 

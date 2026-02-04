@@ -1,7 +1,2 @@
-Name; Empid; Dept; Salary; HRA; DA; Gross Salary
-Shanmukha; 101; SDE; 1000000; 20000; 180000; 1200000
-Hrithika; 102; Senior Consultant; 90000; 1800; 16200; 108000
-Nypunya; 103; Project Manager; 95000; 1900; 17100; 114000
-Nithya; 104; Devops Engineer; 100000; 2000; 18000; 120000
-Hinduja; 105; Cloud Engineer; 97000; 1940; 17460; 116400
-Mahima; 106; Front-end Engineer; 85000; 1700; 15300; 102000
+106,1700.0,15300.0,102000.0
+000.0,180000.0,1200000.0
