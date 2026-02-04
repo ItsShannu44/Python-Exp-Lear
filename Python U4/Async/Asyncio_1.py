@@ -12,7 +12,6 @@ async def Job(name, delay):
 
 async def main():
     t0 = time.time()
-    ''' Overall start time '''
     results = await asyncio.gather(Job(1, 12), Job(2, 3), Job(3, 1), Job(4, 2), Job(5, 5), Job(6, 2))
     t1 = time.time()
     print(f'Overall time taken for execution is {t1 - t0} seconds')
