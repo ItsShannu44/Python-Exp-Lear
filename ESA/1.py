@@ -21,7 +21,6 @@ print(oct(n))
 print(hex(n))
 
 
-
 #Count vowels in string
 s = input()
 count = 0
