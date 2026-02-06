@@ -24,7 +24,7 @@ class D(B, C):
 class E(C,B):
     pass
 
-D().do()
+obj=D().do()
 
 print('MRO of class D:',[cls.__name__ for cls in D.mro()])
 print('MRO of class E:',[cls.__name__ for cls in E.mro()])
